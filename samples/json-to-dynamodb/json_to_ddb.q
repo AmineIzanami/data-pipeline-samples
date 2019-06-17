@@ -6,7 +6,7 @@ CREATE EXTERNAL TABLE customer_json (id STRING,
                                      income STRING)
 ROW FORMAT SERDE 'com.amazon.elasticmapreduce.JsonSerde'
 WITH SERDEPROPERTIES ('paths'='customer_id,customer_income')
-LOCATION 's3://datapipeline-samples/JsonToDynamoDb/customers.json';
+LOCATION 's3://datapipeline-samples/JsonToDynamoDb/';
 
 DROP TABLE IF EXISTS customer_hive;
 
